@@ -10,37 +10,37 @@
  USE lab;
 
  #a
- CREATE TABLE Class (
+ CREATE TABLE class (
      id INT NOT NULL PRIMARY KEY,
      name CHAR(20)
     );
 
  #b
- INSERT INTO Class (id,name) VALUES (1,'Chris'),(2,'Romeo');
+ INSERT INTO class (id,name) VALUES (1,'Chris'),(2,'Romeo');
 
  #c
- SELECT * FROM Class;
+ SELECT * FROM class;
 
  #d
  START TRANSACTION;
 
-INSERT INTO Class (id,name) VALUES (3,'Bravo');
+INSERT INTO class (id,name) VALUES (3,'Bravo');
 
-SELECT * FROM Class;
+SELECT * FROM class;
 
 
 
 ROLLBACK;
 
-SELECT * FROM Class;
+SELECT * FROM class;
 
 
 
-INSERT INTO Class (id,name) VALUES (4,'Rayan');
+INSERT INTO class (id,name) VALUES (4,'Rayan');
 
 COMMIT;
 
-SELECT * FROM Class;
+SELECT * FROM class;
 
 
 
@@ -48,15 +48,15 @@ START TRANSACTION;
 
 SAVEPOINT A;
 
- INSERT INTO Class (id,name) VALUES (5,'Naveen');
+ INSERT INTO class (id,name) VALUES (5,'Naveen');
 
- SELECT * FROM Class;
+ SELECT * FROM class;
 
 
 
 ROLLBACK TO A;
 
-SELECT * FROM Class;
+SELECT * FROM class;
 
 
 
