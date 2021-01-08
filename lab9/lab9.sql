@@ -42,7 +42,7 @@ INSERT INTO Deposit(baccno,branch_name,amount)
 
 #4
 SELECT branch_name,COUNT(baccno),SUM(amount) FROM Deposit
-    -> GROUP BY branch_name;
+     GROUP BY branch_name;
 
 
 
